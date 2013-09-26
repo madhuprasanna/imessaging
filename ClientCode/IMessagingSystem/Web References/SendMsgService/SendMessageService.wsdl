@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www20.brinkster.com/madhuprasanna/SendMessageService/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www20.brinkster.com/madhuprasanna/SendMessageService/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www20.brinkster.com/madhuprasanna/SendMessageService/">
+      <s:element name="SendMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SenderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChallengePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiverId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTimedMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SenderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChallengePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiverId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendTimedMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendTimedMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendGroupMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SenderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChallengePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendGroupMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendGroupMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendGroupTimedMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SenderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ChallengePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendGroupTimedMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendGroupTimedMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="SendMessageSoapIn">
+    <part name="parameters" element="s0:SendMessage" />
+  </message>
+  <message name="SendMessageSoapOut">
+    <part name="parameters" element="s0:SendMessageResponse" />
+  </message>
+  <message name="SendTimedMessageSoapIn">
+    <part name="parameters" element="s0:SendTimedMessage" />
+  </message>
+  <message name="SendTimedMessageSoapOut">
+    <part name="parameters" element="s0:SendTimedMessageResponse" />
+  </message>
+  <message name="SendGroupMessageSoapIn">
+    <part name="parameters" element="s0:SendGroupMessage" />
+  </message>
+  <message name="SendGroupMessageSoapOut">
+    <part name="parameters" element="s0:SendGroupMessageResponse" />
+  </message>
+  <message name="SendGroupTimedMessageSoapIn">
+    <part name="parameters" element="s0:SendGroupTimedMessage" />
+  </message>
+  <message name="SendGroupTimedMessageSoapOut">
+    <part name="parameters" element="s0:SendGroupTimedMessageResponse" />
+  </message>
+  <message name="SendMessageHttpGetIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="ReceiverId" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendMessageHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendTimedMessageHttpGetIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="ReceiverId" type="s:string" />
+    <part name="Message" type="s:string" />
+    <part name="DT" type="s:string" />
+  </message>
+  <message name="SendTimedMessageHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendGroupMessageHttpGetIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="GroupId" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendGroupMessageHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendGroupTimedMessageHttpGetIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="GroupId" type="s:string" />
+    <part name="Message" type="s:string" />
+    <part name="DT" type="s:string" />
+  </message>
+  <message name="SendGroupTimedMessageHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendMessageHttpPostIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="ReceiverId" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendMessageHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendTimedMessageHttpPostIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="ReceiverId" type="s:string" />
+    <part name="Message" type="s:string" />
+    <part name="DT" type="s:string" />
+  </message>
+  <message name="SendTimedMessageHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendGroupMessageHttpPostIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="GroupId" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendGroupMessageHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendGroupTimedMessageHttpPostIn">
+    <part name="SenderId" type="s:string" />
+    <part name="ChallengePass" type="s:string" />
+    <part name="GroupId" type="s:string" />
+    <part name="Message" type="s:string" />
+    <part name="DT" type="s:string" />
+  </message>
+  <message name="SendGroupTimedMessageHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="SendMessageServiceSoap">
+    <operation name="SendMessage">
+      <input message="s0:SendMessageSoapIn" />
+      <output message="s0:SendMessageSoapOut" />
+    </operation>
+    <operation name="SendTimedMessage">
+      <input message="s0:SendTimedMessageSoapIn" />
+      <output message="s0:SendTimedMessageSoapOut" />
+    </operation>
+    <operation name="SendGroupMessage">
+      <input message="s0:SendGroupMessageSoapIn" />
+      <output message="s0:SendGroupMessageSoapOut" />
+    </operation>
+    <operation name="SendGroupTimedMessage">
+      <input message="s0:SendGroupTimedMessageSoapIn" />
+      <output message="s0:SendGroupTimedMessageSoapOut" />
+    </operation>
+  </portType>
+  <portType name="SendMessageServiceHttpGet">
+    <operation name="SendMessage">
+      <input message="s0:SendMessageHttpGetIn" />
+      <output message="s0:SendMessageHttpGetOut" />
+    </operation>
+    <operation name="SendTimedMessage">
+      <input message="s0:SendTimedMessageHttpGetIn" />
+      <output message="s0:SendTimedMessageHttpGetOut" />
+    </operation>
+    <operation name="SendGroupMessage">
+      <input message="s0:SendGroupMessageHttpGetIn" />
+      <output message="s0:SendGroupMessageHttpGetOut" />
+    </operation>
+    <operation name="SendGroupTimedMessage">
+      <input message="s0:SendGroupTimedMessageHttpGetIn" />
+      <output message="s0:SendGroupTimedMessageHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="SendMessageServiceHttpPost">
+    <operation name="SendMessage">
+      <input message="s0:SendMessageHttpPostIn" />
+      <output message="s0:SendMessageHttpPostOut" />
+    </operation>
+    <operation name="SendTimedMessage">
+      <input message="s0:SendTimedMessageHttpPostIn" />
+      <output message="s0:SendTimedMessageHttpPostOut" />
+    </operation>
+    <operation name="SendGroupMessage">
+      <input message="s0:SendGroupMessageHttpPostIn" />
+      <output message="s0:SendGroupMessageHttpPostOut" />
+    </operation>
+    <operation name="SendGroupTimedMessage">
+      <input message="s0:SendGroupTimedMessageHttpPostIn" />
+      <output message="s0:SendGroupTimedMessageHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="SendMessageServiceSoap" type="s0:SendMessageServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="SendMessage">
+      <soap:operation soapAction="http://www20.brinkster.com/madhuprasanna/SendMessageService/SendMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SendTimedMessage">
+      <soap:operation soapAction="http://www20.brinkster.com/madhuprasanna/SendMessageService/SendTimedMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SendGroupMessage">
+      <soap:operation soapAction="http://www20.brinkster.com/madhuprasanna/SendMessageService/SendGroupMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SendGroupTimedMessage">
+      <soap:operation soapAction="http://www20.brinkster.com/madhuprasanna/SendMessageService/SendGroupTimedMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SendMessageServiceHttpGet" type="s0:SendMessageServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="SendMessage">
+      <http:operation location="/SendMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SendTimedMessage">
+      <http:operation location="/SendTimedMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SendGroupMessage">
+      <http:operation location="/SendGroupMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SendGroupTimedMessage">
+      <http:operation location="/SendGroupTimedMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SendMessageServiceHttpPost" type="s0:SendMessageServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="SendMessage">
+      <http:operation location="/SendMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SendTimedMessage">
+      <http:operation location="/SendTimedMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SendGroupMessage">
+      <http:operation location="/SendGroupMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SendGroupTimedMessage">
+      <http:operation location="/SendGroupTimedMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SendMessageService">
+    <port name="SendMessageServiceSoap" binding="s0:SendMessageServiceSoap">
+      <soap:address location="http://localhost/SendMessageService/SendMessageService.asmx" />
+    </port>
+    <port name="SendMessageServiceHttpGet" binding="s0:SendMessageServiceHttpGet">
+      <http:address location="http://localhost/SendMessageService/SendMessageService.asmx" />
+    </port>
+    <port name="SendMessageServiceHttpPost" binding="s0:SendMessageServiceHttpPost">
+      <http:address location="http://localhost/SendMessageService/SendMessageService.asmx" />
+    </port>
+  </service>
+</definitions>

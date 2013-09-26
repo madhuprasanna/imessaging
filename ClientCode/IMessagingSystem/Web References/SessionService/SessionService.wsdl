@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ClearSession">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SchoolName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearSessionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClearSessionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DOB" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SchoolName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClearPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ClearPasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangePasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangePasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerTime">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetServerTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetServerTimeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Settings" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StoreSettingsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadSettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadSettingsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreIPAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IpAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreIPAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StoreIPAddressResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreBackMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Messages" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreBackMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StoreBackMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="ClearSessionSoapIn">
+    <part name="parameters" element="s0:ClearSession" />
+  </message>
+  <message name="ClearSessionSoapOut">
+    <part name="parameters" element="s0:ClearSessionResponse" />
+  </message>
+  <message name="ClearPasswordSoapIn">
+    <part name="parameters" element="s0:ClearPassword" />
+  </message>
+  <message name="ClearPasswordSoapOut">
+    <part name="parameters" element="s0:ClearPasswordResponse" />
+  </message>
+  <message name="ChangePasswordSoapIn">
+    <part name="parameters" element="s0:ChangePassword" />
+  </message>
+  <message name="ChangePasswordSoapOut">
+    <part name="parameters" element="s0:ChangePasswordResponse" />
+  </message>
+  <message name="GetServerTimeSoapIn">
+    <part name="parameters" element="s0:GetServerTime" />
+  </message>
+  <message name="GetServerTimeSoapOut">
+    <part name="parameters" element="s0:GetServerTimeResponse" />
+  </message>
+  <message name="StoreSettingsSoapIn">
+    <part name="parameters" element="s0:StoreSettings" />
+  </message>
+  <message name="StoreSettingsSoapOut">
+    <part name="parameters" element="s0:StoreSettingsResponse" />
+  </message>
+  <message name="LoadSettingsSoapIn">
+    <part name="parameters" element="s0:LoadSettings" />
+  </message>
+  <message name="LoadSettingsSoapOut">
+    <part name="parameters" element="s0:LoadSettingsResponse" />
+  </message>
+  <message name="StoreIPAddressSoapIn">
+    <part name="parameters" element="s0:StoreIPAddress" />
+  </message>
+  <message name="StoreIPAddressSoapOut">
+    <part name="parameters" element="s0:StoreIPAddressResponse" />
+  </message>
+  <message name="StoreBackMessageSoapIn">
+    <part name="parameters" element="s0:StoreBackMessage" />
+  </message>
+  <message name="StoreBackMessageSoapOut">
+    <part name="parameters" element="s0:StoreBackMessageResponse" />
+  </message>
+  <message name="ClearSessionHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="Password" type="s:string" />
+    <part name="DOB" type="s:string" />
+    <part name="SchoolName" type="s:string" />
+  </message>
+  <message name="ClearSessionHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="ClearPasswordHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="DOB" type="s:string" />
+    <part name="SchoolName" type="s:string" />
+  </message>
+  <message name="ClearPasswordHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="ChangePasswordHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="OldPassword" type="s:string" />
+    <part name="NewPassword" type="s:string" />
+  </message>
+  <message name="ChangePasswordHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetServerTimeHttpGetIn" />
+  <message name="GetServerTimeHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreSettingsHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="Settings" type="s:string" />
+  </message>
+  <message name="StoreSettingsHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="LoadSettingsHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="LoadSettingsHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreIPAddressHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="IpAddress" type="s:string" />
+  </message>
+  <message name="StoreIPAddressHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreBackMessageHttpGetIn">
+    <part name="Messages" type="s:string" />
+  </message>
+  <message name="StoreBackMessageHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="ClearSessionHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="Password" type="s:string" />
+    <part name="DOB" type="s:string" />
+    <part name="SchoolName" type="s:string" />
+  </message>
+  <message name="ClearSessionHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="ClearPasswordHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="DOB" type="s:string" />
+    <part name="SchoolName" type="s:string" />
+  </message>
+  <message name="ClearPasswordHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="ChangePasswordHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="OldPassword" type="s:string" />
+    <part name="NewPassword" type="s:string" />
+  </message>
+  <message name="ChangePasswordHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetServerTimeHttpPostIn" />
+  <message name="GetServerTimeHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreSettingsHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="Settings" type="s:string" />
+  </message>
+  <message name="StoreSettingsHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="LoadSettingsHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="LoadSettingsHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreIPAddressHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="IpAddress" type="s:string" />
+  </message>
+  <message name="StoreIPAddressHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreBackMessageHttpPostIn">
+    <part name="Messages" type="s:string" />
+  </message>
+  <message name="StoreBackMessageHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="SessionServiceSoap">
+    <operation name="ClearSession">
+      <input message="s0:ClearSessionSoapIn" />
+      <output message="s0:ClearSessionSoapOut" />
+    </operation>
+    <operation name="ClearPassword">
+      <input message="s0:ClearPasswordSoapIn" />
+      <output message="s0:ClearPasswordSoapOut" />
+    </operation>
+    <operation name="ChangePassword">
+      <input message="s0:ChangePasswordSoapIn" />
+      <output message="s0:ChangePasswordSoapOut" />
+    </operation>
+    <operation name="GetServerTime">
+      <input message="s0:GetServerTimeSoapIn" />
+      <output message="s0:GetServerTimeSoapOut" />
+    </operation>
+    <operation name="StoreSettings">
+      <input message="s0:StoreSettingsSoapIn" />
+      <output message="s0:StoreSettingsSoapOut" />
+    </operation>
+    <operation name="LoadSettings">
+      <input message="s0:LoadSettingsSoapIn" />
+      <output message="s0:LoadSettingsSoapOut" />
+    </operation>
+    <operation name="StoreIPAddress">
+      <input message="s0:StoreIPAddressSoapIn" />
+      <output message="s0:StoreIPAddressSoapOut" />
+    </operation>
+    <operation name="StoreBackMessage">
+      <input message="s0:StoreBackMessageSoapIn" />
+      <output message="s0:StoreBackMessageSoapOut" />
+    </operation>
+  </portType>
+  <portType name="SessionServiceHttpGet">
+    <operation name="ClearSession">
+      <input message="s0:ClearSessionHttpGetIn" />
+      <output message="s0:ClearSessionHttpGetOut" />
+    </operation>
+    <operation name="ClearPassword">
+      <input message="s0:ClearPasswordHttpGetIn" />
+      <output message="s0:ClearPasswordHttpGetOut" />
+    </operation>
+    <operation name="ChangePassword">
+      <input message="s0:ChangePasswordHttpGetIn" />
+      <output message="s0:ChangePasswordHttpGetOut" />
+    </operation>
+    <operation name="GetServerTime">
+      <input message="s0:GetServerTimeHttpGetIn" />
+      <output message="s0:GetServerTimeHttpGetOut" />
+    </operation>
+    <operation name="StoreSettings">
+      <input message="s0:StoreSettingsHttpGetIn" />
+      <output message="s0:StoreSettingsHttpGetOut" />
+    </operation>
+    <operation name="LoadSettings">
+      <input message="s0:LoadSettingsHttpGetIn" />
+      <output message="s0:LoadSettingsHttpGetOut" />
+    </operation>
+    <operation name="StoreIPAddress">
+      <input message="s0:StoreIPAddressHttpGetIn" />
+      <output message="s0:StoreIPAddressHttpGetOut" />
+    </operation>
+    <operation name="StoreBackMessage">
+      <input message="s0:StoreBackMessageHttpGetIn" />
+      <output message="s0:StoreBackMessageHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="SessionServiceHttpPost">
+    <operation name="ClearSession">
+      <input message="s0:ClearSessionHttpPostIn" />
+      <output message="s0:ClearSessionHttpPostOut" />
+    </operation>
+    <operation name="ClearPassword">
+      <input message="s0:ClearPasswordHttpPostIn" />
+      <output message="s0:ClearPasswordHttpPostOut" />
+    </operation>
+    <operation name="ChangePassword">
+      <input message="s0:ChangePasswordHttpPostIn" />
+      <output message="s0:ChangePasswordHttpPostOut" />
+    </operation>
+    <operation name="GetServerTime">
+      <input message="s0:GetServerTimeHttpPostIn" />
+      <output message="s0:GetServerTimeHttpPostOut" />
+    </operation>
+    <operation name="StoreSettings">
+      <input message="s0:StoreSettingsHttpPostIn" />
+      <output message="s0:StoreSettingsHttpPostOut" />
+    </operation>
+    <operation name="LoadSettings">
+      <input message="s0:LoadSettingsHttpPostIn" />
+      <output message="s0:LoadSettingsHttpPostOut" />
+    </operation>
+    <operation name="StoreIPAddress">
+      <input message="s0:StoreIPAddressHttpPostIn" />
+      <output message="s0:StoreIPAddressHttpPostOut" />
+    </operation>
+    <operation name="StoreBackMessage">
+      <input message="s0:StoreBackMessageHttpPostIn" />
+      <output message="s0:StoreBackMessageHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="SessionServiceSoap" type="s0:SessionServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="ClearSession">
+      <soap:operation soapAction="http://tempuri.org/ClearSession" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ClearPassword">
+      <soap:operation soapAction="http://tempuri.org/ClearPassword" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ChangePassword">
+      <soap:operation soapAction="http://tempuri.org/ChangePassword" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetServerTime">
+      <soap:operation soapAction="http://tempuri.org/GetServerTime" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="StoreSettings">
+      <soap:operation soapAction="http://tempuri.org/StoreSettings" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="LoadSettings">
+      <soap:operation soapAction="http://tempuri.org/LoadSettings" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="StoreIPAddress">
+      <soap:operation soapAction="http://tempuri.org/StoreIPAddress" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="StoreBackMessage">
+      <soap:operation soapAction="http://tempuri.org/StoreBackMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SessionServiceHttpGet" type="s0:SessionServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="ClearSession">
+      <http:operation location="/ClearSession" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ClearPassword">
+      <http:operation location="/ClearPassword" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetServerTime">
+      <http:operation location="/GetServerTime" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreSettings">
+      <http:operation location="/StoreSettings" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="LoadSettings">
+      <http:operation location="/LoadSettings" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreIPAddress">
+      <http:operation location="/StoreIPAddress" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreBackMessage">
+      <http:operation location="/StoreBackMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="SessionServiceHttpPost" type="s0:SessionServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="ClearSession">
+      <http:operation location="/ClearSession" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ClearPassword">
+      <http:operation location="/ClearPassword" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="ChangePassword">
+      <http:operation location="/ChangePassword" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetServerTime">
+      <http:operation location="/GetServerTime" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreSettings">
+      <http:operation location="/StoreSettings" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="LoadSettings">
+      <http:operation location="/LoadSettings" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreIPAddress">
+      <http:operation location="/StoreIPAddress" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreBackMessage">
+      <http:operation location="/StoreBackMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SessionService">
+    <port name="SessionServiceSoap" binding="s0:SessionServiceSoap">
+      <soap:address location="http://localhost/SessionService/SessionService.asmx" />
+    </port>
+    <port name="SessionServiceHttpGet" binding="s0:SessionServiceHttpGet">
+      <http:address location="http://localhost/SessionService/SessionService.asmx" />
+    </port>
+    <port name="SessionServiceHttpPost" binding="s0:SessionServiceHttpPost">
+      <http:address location="http://localhost/SessionService/SessionService.asmx" />
+    </port>
+  </service>
+</definitions>

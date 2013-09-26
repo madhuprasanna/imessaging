@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="LoadAddressBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadAddressBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoadAddressBookResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreAddressBook">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddressBookString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StoreAddressBookResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StoreAddressBookResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="LoadAddressBookSoapIn">
+    <part name="parameters" element="s0:LoadAddressBook" />
+  </message>
+  <message name="LoadAddressBookSoapOut">
+    <part name="parameters" element="s0:LoadAddressBookResponse" />
+  </message>
+  <message name="StoreAddressBookSoapIn">
+    <part name="parameters" element="s0:StoreAddressBook" />
+  </message>
+  <message name="StoreAddressBookSoapOut">
+    <part name="parameters" element="s0:StoreAddressBookResponse" />
+  </message>
+  <message name="LoadAddressBookHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="LoadAddressBookHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreAddressBookHttpGetIn">
+    <part name="UserID" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="AddressBookString" type="s:string" />
+  </message>
+  <message name="StoreAddressBookHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="LoadAddressBookHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="LoadAddressBookHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="StoreAddressBookHttpPostIn">
+    <part name="UserID" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="AddressBookString" type="s:string" />
+  </message>
+  <message name="StoreAddressBookHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="AddressBookServiceSoap">
+    <operation name="LoadAddressBook">
+      <input message="s0:LoadAddressBookSoapIn" />
+      <output message="s0:LoadAddressBookSoapOut" />
+    </operation>
+    <operation name="StoreAddressBook">
+      <input message="s0:StoreAddressBookSoapIn" />
+      <output message="s0:StoreAddressBookSoapOut" />
+    </operation>
+  </portType>
+  <portType name="AddressBookServiceHttpGet">
+    <operation name="LoadAddressBook">
+      <input message="s0:LoadAddressBookHttpGetIn" />
+      <output message="s0:LoadAddressBookHttpGetOut" />
+    </operation>
+    <operation name="StoreAddressBook">
+      <input message="s0:StoreAddressBookHttpGetIn" />
+      <output message="s0:StoreAddressBookHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="AddressBookServiceHttpPost">
+    <operation name="LoadAddressBook">
+      <input message="s0:LoadAddressBookHttpPostIn" />
+      <output message="s0:LoadAddressBookHttpPostOut" />
+    </operation>
+    <operation name="StoreAddressBook">
+      <input message="s0:StoreAddressBookHttpPostIn" />
+      <output message="s0:StoreAddressBookHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="AddressBookServiceSoap" type="s0:AddressBookServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="LoadAddressBook">
+      <soap:operation soapAction="http://tempuri.org/LoadAddressBook" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="StoreAddressBook">
+      <soap:operation soapAction="http://tempuri.org/StoreAddressBook" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="AddressBookServiceHttpGet" type="s0:AddressBookServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="LoadAddressBook">
+      <http:operation location="/LoadAddressBook" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreAddressBook">
+      <http:operation location="/StoreAddressBook" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="AddressBookServiceHttpPost" type="s0:AddressBookServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="LoadAddressBook">
+      <http:operation location="/LoadAddressBook" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="StoreAddressBook">
+      <http:operation location="/StoreAddressBook" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="AddressBookService">
+    <port name="AddressBookServiceSoap" binding="s0:AddressBookServiceSoap">
+      <soap:address location="http://localhost/AddressBookService/AddressBookService.asmx" />
+    </port>
+    <port name="AddressBookServiceHttpGet" binding="s0:AddressBookServiceHttpGet">
+      <http:address location="http://localhost/AddressBookService/AddressBookService.asmx" />
+    </port>
+    <port name="AddressBookServiceHttpPost" binding="s0:AddressBookServiceHttpPost">
+      <http:address location="http://localhost/AddressBookService/AddressBookService.asmx" />
+    </port>
+  </service>
+</definitions>

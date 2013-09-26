@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost/SendMessageService/SendMessageService.asmx?wsdl" docRef="http://localhost/SendMessageService/SendMessageService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost/SendMessageService/SendMessageService.asmx" xmlns:q1="http://www20.brinkster.com/madhuprasanna/SendMessageService/" binding="q1:SendMessageServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

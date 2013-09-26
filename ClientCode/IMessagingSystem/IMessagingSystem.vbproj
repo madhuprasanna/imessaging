@@ -1,0 +1,507 @@
+<VisualStudioProject>
+    <VisualBasic
+        ProjectType = "Local"
+        ProductVersion = "7.0.9466"
+        SchemaVersion = "1.0"
+        ProjectGuid = "{12DDAAA6-53A0-4B4D-AEF1-8DAFE7F8A471}"
+    >
+        <Build>
+            <Settings
+                ApplicationIcon = ""
+                AssemblyKeyContainerName = ""
+                AssemblyName = "IMessagingSystem"
+                AssemblyOriginatorKeyFile = ""
+                AssemblyOriginatorKeyMode = "None"
+                DefaultClientScript = "JScript"
+                DefaultHTMLPageLayout = "Grid"
+                DefaultTargetSchema = "IE50"
+                DelaySign = "false"
+                OutputType = "WinExe"
+                OptionCompare = "Binary"
+                OptionExplicit = "On"
+                OptionStrict = "Off"
+                RootNamespace = "IMessagingSystem"
+                StartupObject = "IMessagingSystem.frmMain"
+            >
+                <Config
+                    Name = "Debug"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "true"
+                    DefineTrace = "true"
+                    DebugSymbols = "true"
+                    IncrementalBuild = "true"
+                    Optimize = "false"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+                <Config
+                    Name = "Release"
+                    BaseAddress = "285212672"
+                    ConfigurationOverrideFile = ""
+                    DefineConstants = ""
+                    DefineDebug = "false"
+                    DefineTrace = "true"
+                    DebugSymbols = "false"
+                    IncrementalBuild = "false"
+                    Optimize = "true"
+                    OutputPath = "bin\"
+                    RegisterForComInterop = "false"
+                    RemoveIntegerChecks = "false"
+                    TreatWarningsAsErrors = "false"
+                    WarningLevel = "1"
+                />
+            </Settings>
+            <References>
+                <Reference
+                    Name = "System"
+                    AssemblyName = "System"
+                />
+                <Reference
+                    Name = "System.Data"
+                    AssemblyName = "System.Data"
+                />
+                <Reference
+                    Name = "System.Drawing"
+                    AssemblyName = "System.Drawing"
+                />
+                <Reference
+                    Name = "System.Windows.Forms"
+                    AssemblyName = "System.Windows.Forms"
+                />
+                <Reference
+                    Name = "System.XML"
+                    AssemblyName = "System.Xml"
+                />
+                <Reference
+                    Name = "System.Web.Services"
+                    AssemblyName = "System.Web.Services"
+                    HintPath = "C:\WINDOWS\Microsoft.NET\Framework\v1.0.3705\System.Web.Services.dll"
+                />
+            </References>
+            <Imports>
+                <Import Namespace = "Microsoft.VisualBasic" />
+                <Import Namespace = "System" />
+                <Import Namespace = "System.Collections" />
+                <Import Namespace = "System.Data" />
+                <Import Namespace = "System.Drawing" />
+                <Import Namespace = "System.Diagnostics" />
+                <Import Namespace = "System.Windows.Forms" />
+            </Imports>
+        </Build>
+        <Files>
+            <Include>
+                <File
+                    RelPath = "AssemblyInfo.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CAddressBook.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CMessageDisplayer.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CMessageReceiver.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CMessagingServices.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "CSound.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmAbout.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmAbout.resx"
+                    DependentUpon = "frmAbout.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmAddressBook.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmAddressBook.resx"
+                    DependentUpon = "frmAddressBook.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmClearSession.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmClearSession.resx"
+                    DependentUpon = "frmClearSession.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmGetIpAddress.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmGetIpAddress.resx"
+                    DependentUpon = "frmGetIpAddress.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmMain.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmMain.resx"
+                    DependentUpon = "frmMain.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmMessageBox.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmMessageBox.resx"
+                    DependentUpon = "frmMessageBox.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmOperationMessages.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmOperationMessages.resx"
+                    DependentUpon = "frmOperationMessages.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmRegistration.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmRegistration.resx"
+                    DependentUpon = "frmRegistration.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmSearch.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmSearch.resx"
+                    DependentUpon = "frmSearch.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmSendMessage.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmSendMessage.resx"
+                    DependentUpon = "frmSendMessage.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmSettings.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmSettings.resx"
+                    DependentUpon = "frmSettings.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmSignIn.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmSignIn.resx"
+                    DependentUpon = "frmSignIn.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmTimeSelect.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmTimeSelect.resx"
+                    DependentUpon = "frmTimeSelect.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmVoteResult.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmVoteResult.resx"
+                    DependentUpon = "frmVoteResult.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "frmVotingMessage.vb"
+                    SubType = "Form"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "frmVotingMessage.resx"
+                    DependentUpon = "frmVotingMessage.vb"
+                    BuildAction = "EmbeddedResource"
+                />
+                <File
+                    RelPath = "modSessionData.vb"
+                    SubType = "Code"
+                    BuildAction = "Compile"
+                />
+                <File
+                    RelPath = "Web References\AddressBookService\AddressBookService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AddressBookService\AddressBookService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AddressBookService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\AddressBookService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\AddressBookService\"
+                    WebReferenceUrl = "http://localhost/AddressBookService/AddressBookService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\AuthService\AuthService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AuthService\AuthService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\AuthService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\AuthService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\AuthService\"
+                    WebReferenceUrl = "http://localhost/AuthService/AuthService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\RegistrationService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\RegistrationService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\RegistrationService\RegistrationService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\RegistrationService\RegistrationService.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\RegistrationService\"
+                    WebReferenceUrl = "http://localhost/RegistrationService/RegistrationService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\ReqMsgService\ReceiveMessageService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ReqMsgService\ReceiveMessageService.wsdl"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\ReqMsgService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\ReqMsgService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <Folder
+                    RelPath = "Web References\ReqMsgService\"
+                    WebReferenceUrl = "http://localhost/ReceiveMessageService/ReceiveMessageService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\SearchService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\SearchService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\SearchService\SearchService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\SearchService\SearchService.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\SearchService\"
+                    WebReferenceUrl = "http://localhost/SearchService/SearchService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\SendMsgService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\SendMsgService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\SendMsgService\SendMessageService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\SendMsgService\SendMessageService.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\SendMsgService\"
+                    WebReferenceUrl = "http://localhost/SendMessageService/SendMessageService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\SessionService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\SessionService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\SessionService\SessionService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\SessionService\SessionService.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\SessionService\"
+                    WebReferenceUrl = "http://localhost/SessionService/SessionService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <File
+                    RelPath = "Web References\VoteService\Reference.map"
+                    BuildAction = "None"
+                    Generator = "MSDiscoCodeGenerator"
+                    LastGenOutput = "Reference.vb"
+                />
+                <File
+                    RelPath = "Web References\VoteService\Reference.vb"
+                    DependentUpon = "Reference.map"
+                    SubType = "code"
+                    BuildAction = "Compile"
+                    DesignTime = "True"
+                    AutoGen = "True"
+                />
+                <File
+                    RelPath = "Web References\VoteService\VoteService.disco"
+                    BuildAction = "None"
+                />
+                <File
+                    RelPath = "Web References\VoteService\VoteService.wsdl"
+                    BuildAction = "None"
+                />
+                <Folder
+                    RelPath = "Web References\VoteService\"
+                    WebReferenceUrl = "http://localhost/voteService/VoteService.asmx"
+                    UrlBehavior = "Static"
+                />
+                <Folder
+                    RelPath = "Web References\"
+                    WebReferences = "TRUE"
+                />
+            </Include>
+        </Files>
+    </VisualBasic>
+</VisualStudioProject>
+

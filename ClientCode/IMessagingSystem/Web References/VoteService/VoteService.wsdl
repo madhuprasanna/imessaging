@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendVoteMessage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SenderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendVoteMessageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendVoteMessageResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyVote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VoteString" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyVoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MyVoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoteDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVoteDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVoteDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MessageId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteVoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="SendVoteMessageSoapIn">
+    <part name="parameters" element="s0:SendVoteMessage" />
+  </message>
+  <message name="SendVoteMessageSoapOut">
+    <part name="parameters" element="s0:SendVoteMessageResponse" />
+  </message>
+  <message name="MyVoteSoapIn">
+    <part name="parameters" element="s0:MyVote" />
+  </message>
+  <message name="MyVoteSoapOut">
+    <part name="parameters" element="s0:MyVoteResponse" />
+  </message>
+  <message name="GetVoteDetailsSoapIn">
+    <part name="parameters" element="s0:GetVoteDetails" />
+  </message>
+  <message name="GetVoteDetailsSoapOut">
+    <part name="parameters" element="s0:GetVoteDetailsResponse" />
+  </message>
+  <message name="DeleteVoteSoapIn">
+    <part name="parameters" element="s0:DeleteVote" />
+  </message>
+  <message name="DeleteVoteSoapOut">
+    <part name="parameters" element="s0:DeleteVoteResponse" />
+  </message>
+  <message name="SendVoteMessageHttpGetIn">
+    <part name="SenderId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="GroupId" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendVoteMessageHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="MyVoteHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="MessageId" type="s:string" />
+    <part name="VoteString" type="s:string" />
+  </message>
+  <message name="MyVoteHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetVoteDetailsHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="GetVoteDetailsHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="DeleteVoteHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="MessageId" type="s:string" />
+  </message>
+  <message name="DeleteVoteHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SendVoteMessageHttpPostIn">
+    <part name="SenderId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="GroupId" type="s:string" />
+    <part name="Message" type="s:string" />
+  </message>
+  <message name="SendVoteMessageHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="MyVoteHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="MessageId" type="s:string" />
+    <part name="VoteString" type="s:string" />
+  </message>
+  <message name="MyVoteHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetVoteDetailsHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="GetVoteDetailsHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="DeleteVoteHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+    <part name="MessageId" type="s:string" />
+  </message>
+  <message name="DeleteVoteHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="VoteServiceSoap">
+    <operation name="SendVoteMessage">
+      <input message="s0:SendVoteMessageSoapIn" />
+      <output message="s0:SendVoteMessageSoapOut" />
+    </operation>
+    <operation name="MyVote">
+      <input message="s0:MyVoteSoapIn" />
+      <output message="s0:MyVoteSoapOut" />
+    </operation>
+    <operation name="GetVoteDetails">
+      <input message="s0:GetVoteDetailsSoapIn" />
+      <output message="s0:GetVoteDetailsSoapOut" />
+    </operation>
+    <operation name="DeleteVote">
+      <input message="s0:DeleteVoteSoapIn" />
+      <output message="s0:DeleteVoteSoapOut" />
+    </operation>
+  </portType>
+  <portType name="VoteServiceHttpGet">
+    <operation name="SendVoteMessage">
+      <input message="s0:SendVoteMessageHttpGetIn" />
+      <output message="s0:SendVoteMessageHttpGetOut" />
+    </operation>
+    <operation name="MyVote">
+      <input message="s0:MyVoteHttpGetIn" />
+      <output message="s0:MyVoteHttpGetOut" />
+    </operation>
+    <operation name="GetVoteDetails">
+      <input message="s0:GetVoteDetailsHttpGetIn" />
+      <output message="s0:GetVoteDetailsHttpGetOut" />
+    </operation>
+    <operation name="DeleteVote">
+      <input message="s0:DeleteVoteHttpGetIn" />
+      <output message="s0:DeleteVoteHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="VoteServiceHttpPost">
+    <operation name="SendVoteMessage">
+      <input message="s0:SendVoteMessageHttpPostIn" />
+      <output message="s0:SendVoteMessageHttpPostOut" />
+    </operation>
+    <operation name="MyVote">
+      <input message="s0:MyVoteHttpPostIn" />
+      <output message="s0:MyVoteHttpPostOut" />
+    </operation>
+    <operation name="GetVoteDetails">
+      <input message="s0:GetVoteDetailsHttpPostIn" />
+      <output message="s0:GetVoteDetailsHttpPostOut" />
+    </operation>
+    <operation name="DeleteVote">
+      <input message="s0:DeleteVoteHttpPostIn" />
+      <output message="s0:DeleteVoteHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="VoteServiceSoap" type="s0:VoteServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="SendVoteMessage">
+      <soap:operation soapAction="http://tempuri.org/SendVoteMessage" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="MyVote">
+      <soap:operation soapAction="http://tempuri.org/MyVote" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GetVoteDetails">
+      <soap:operation soapAction="http://tempuri.org/GetVoteDetails" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteVote">
+      <soap:operation soapAction="http://tempuri.org/DeleteVote" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="VoteServiceHttpGet" type="s0:VoteServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="SendVoteMessage">
+      <http:operation location="/SendVoteMessage" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="MyVote">
+      <http:operation location="/MyVote" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetVoteDetails">
+      <http:operation location="/GetVoteDetails" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="DeleteVote">
+      <http:operation location="/DeleteVote" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="VoteServiceHttpPost" type="s0:VoteServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="SendVoteMessage">
+      <http:operation location="/SendVoteMessage" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="MyVote">
+      <http:operation location="/MyVote" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="GetVoteDetails">
+      <http:operation location="/GetVoteDetails" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="DeleteVote">
+      <http:operation location="/DeleteVote" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="VoteService">
+    <port name="VoteServiceSoap" binding="s0:VoteServiceSoap">
+      <soap:address location="http://localhost/voteService/VoteService.asmx" />
+    </port>
+    <port name="VoteServiceHttpGet" binding="s0:VoteServiceHttpGet">
+      <http:address location="http://localhost/voteService/VoteService.asmx" />
+    </port>
+    <port name="VoteServiceHttpPost" binding="s0:VoteServiceHttpPost">
+      <http:address location="http://localhost/voteService/VoteService.asmx" />
+    </port>
+  </service>
+</definitions>

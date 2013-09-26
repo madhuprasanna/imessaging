@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IMessagingSystem", "IMessagingSystem.vbproj", "{12DDAAA6-53A0-4B4D-AEF1-8DAFE7F8A471}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "iMessaging Setup", "..\iMessaging Setup\iMessaging Setup.vdproj", "{8E642C69-91E5-4C84-A9C3-4F698CBE7D0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{12DDAAA6-53A0-4B4D-AEF1-8DAFE7F8A471}.Debug.ActiveCfg = Debug|.NET
+		{12DDAAA6-53A0-4B4D-AEF1-8DAFE7F8A471}.Debug.Build.0 = Debug|.NET
+		{12DDAAA6-53A0-4B4D-AEF1-8DAFE7F8A471}.Release.ActiveCfg = Release|.NET
+		{12DDAAA6-53A0-4B4D-AEF1-8DAFE7F8A471}.Release.Build.0 = Release|.NET
+		{8E642C69-91E5-4C84-A9C3-4F698CBE7D0B}.Debug.ActiveCfg = Debug
+		{8E642C69-91E5-4C84-A9C3-4F698CBE7D0B}.Release.ActiveCfg = Release
+		{8E642C69-91E5-4C84-A9C3-4F698CBE7D0B}.Release.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

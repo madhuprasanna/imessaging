@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://www20.brinkster.com/madhuprasanna/ReceiveMessageService/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://www20.brinkster.com/madhuprasanna/ReceiveMessageService/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www20.brinkster.com/madhuprasanna/ReceiveMessageService/">
+      <s:element name="AsyncMessageRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AsyncMessageRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AsyncMessageRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncMessageRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PasswordChallenge" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SyncMessageRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SyncMessageRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="AsyncMessageRequestSoapIn">
+    <part name="parameters" element="s0:AsyncMessageRequest" />
+  </message>
+  <message name="AsyncMessageRequestSoapOut">
+    <part name="parameters" element="s0:AsyncMessageRequestResponse" />
+  </message>
+  <message name="SyncMessageRequestSoapIn">
+    <part name="parameters" element="s0:SyncMessageRequest" />
+  </message>
+  <message name="SyncMessageRequestSoapOut">
+    <part name="parameters" element="s0:SyncMessageRequestResponse" />
+  </message>
+  <message name="AsyncMessageRequestHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="AsyncMessageRequestHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SyncMessageRequestHttpGetIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="SyncMessageRequestHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="AsyncMessageRequestHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="AsyncMessageRequestHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="SyncMessageRequestHttpPostIn">
+    <part name="UserId" type="s:string" />
+    <part name="PasswordChallenge" type="s:string" />
+  </message>
+  <message name="SyncMessageRequestHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="ReceiveMessageServiceSoap">
+    <operation name="AsyncMessageRequest">
+      <input message="s0:AsyncMessageRequestSoapIn" />
+      <output message="s0:AsyncMessageRequestSoapOut" />
+    </operation>
+    <operation name="SyncMessageRequest">
+      <input message="s0:SyncMessageRequestSoapIn" />
+      <output message="s0:SyncMessageRequestSoapOut" />
+    </operation>
+  </portType>
+  <portType name="ReceiveMessageServiceHttpGet">
+    <operation name="AsyncMessageRequest">
+      <input message="s0:AsyncMessageRequestHttpGetIn" />
+      <output message="s0:AsyncMessageRequestHttpGetOut" />
+    </operation>
+    <operation name="SyncMessageRequest">
+      <input message="s0:SyncMessageRequestHttpGetIn" />
+      <output message="s0:SyncMessageRequestHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="ReceiveMessageServiceHttpPost">
+    <operation name="AsyncMessageRequest">
+      <input message="s0:AsyncMessageRequestHttpPostIn" />
+      <output message="s0:AsyncMessageRequestHttpPostOut" />
+    </operation>
+    <operation name="SyncMessageRequest">
+      <input message="s0:SyncMessageRequestHttpPostIn" />
+      <output message="s0:SyncMessageRequestHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="ReceiveMessageServiceSoap" type="s0:ReceiveMessageServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="AsyncMessageRequest">
+      <soap:operation soapAction="http://www20.brinkster.com/madhuprasanna/ReceiveMessageService/AsyncMessageRequest" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SyncMessageRequest">
+      <soap:operation soapAction="http://www20.brinkster.com/madhuprasanna/ReceiveMessageService/SyncMessageRequest" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ReceiveMessageServiceHttpGet" type="s0:ReceiveMessageServiceHttpGet">
+    <http:binding verb="GET" />
+    <operation name="AsyncMessageRequest">
+      <http:operation location="/AsyncMessageRequest" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SyncMessageRequest">
+      <http:operation location="/SyncMessageRequest" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="ReceiveMessageServiceHttpPost" type="s0:ReceiveMessageServiceHttpPost">
+    <http:binding verb="POST" />
+    <operation name="AsyncMessageRequest">
+      <http:operation location="/AsyncMessageRequest" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="SyncMessageRequest">
+      <http:operation location="/SyncMessageRequest" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ReceiveMessageService">
+    <port name="ReceiveMessageServiceSoap" binding="s0:ReceiveMessageServiceSoap">
+      <soap:address location="http://localhost/ReceiveMessageService/ReceiveMessageService.asmx" />
+    </port>
+    <port name="ReceiveMessageServiceHttpGet" binding="s0:ReceiveMessageServiceHttpGet">
+      <http:address location="http://localhost/ReceiveMessageService/ReceiveMessageService.asmx" />
+    </port>
+    <port name="ReceiveMessageServiceHttpPost" binding="s0:ReceiveMessageServiceHttpPost">
+      <http:address location="http://localhost/ReceiveMessageService/ReceiveMessageService.asmx" />
+    </port>
+  </service>
+</definitions>
